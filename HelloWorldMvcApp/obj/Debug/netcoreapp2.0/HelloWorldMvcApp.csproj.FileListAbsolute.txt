@@ -1,0 +1,11 @@
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\bin\Debug\netcoreapp2.0\HelloWorldMvcApp.deps.json
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\bin\Debug\netcoreapp2.0\HelloWorldMvcApp.runtimeconfig.json
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\bin\Debug\netcoreapp2.0\HelloWorldMvcApp.runtimeconfig.dev.json
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\bin\Debug\netcoreapp2.0\HelloWorldMvcApp.dll
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\bin\Debug\netcoreapp2.0\HelloWorldMvcApp.pdb
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\obj\Debug\netcoreapp2.0\HelloWorldMvcApp.csprojResolveAssemblyReference.cache
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\obj\Debug\netcoreapp2.0\HelloWorldMvcApp.csproj.CoreCompileInputs.cache
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\obj\Debug\netcoreapp2.0\HelloWorldMvcApp.AssemblyInfoInputs.cache
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\obj\Debug\netcoreapp2.0\HelloWorldMvcApp.AssemblyInfo.cs
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\obj\Debug\netcoreapp2.0\HelloWorldMvcApp.dll
+C:\Users\cnavarro\Documents\Visual Studio 2017\Projects\HelloWorldMvcApp\HelloWorldMvcApp\obj\Debug\netcoreapp2.0\HelloWorldMvcApp.pdb

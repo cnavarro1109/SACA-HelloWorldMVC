@@ -1,0 +1,79 @@
+﻿@model HelloWorldMvcApp.Models.SampleViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>Hello Stranger</h1>
+
+        @using (Html.BeginForm("GetAnswer", "Home", FormMethod.Post))
+        {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Question)
+            @Html.TextBoxFor(model => model.Question, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Question)
+
+            @Html.LabelFor(m => m.Number)
+            @Html.TextBoxFor(model => model.Number, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Number)
+
+        </div>
+
+            <button type="submit" class="btn btn-success submit">Ask</button>
+        }
+
+        <br /><br />
+        <div class="alert alert-warning fade">
+            <img src="http://entechprod.blob.core.windows.net/dotnetfiddle/morpheus.jpg" style="max-width:100%;" /><br /><br />
+            <strong><span class="alert-content"></span></strong>
+        </div>
+    </div>
+</div>
+
+<!-- JS includes -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+
+			@*function openAlert(txt) {
+				$('.alert-content').text(txt);
+				$('.alert').addClass('in');
+			}
+
+			function closeAlert() {
+				$('.alert').removeClass('in');
+			}
+
+			$(function(){
+				var answer = '@Model.Answer';
+
+				if(answer && answer != '')
+					openAlert(answer);
+
+				$('#Question').change(closeAlert);
+				$('#Question').keyup(closeAlert);
+
+				$('.submit').click(function(){
+		
+
+
+						$.ajax({
+							url: '@Url.RouteUrl(new{ action="GetAnswer", controller="Home"})',
+							data: {Answer: '', Question: $('#Question').val()},
+								type: 'POST',
+								dataType: 'json',
+								contentType: "application/json; charset=utf-8",
+								success: function(resp) {
+								openAlert(resp);
+						}});
+				
+				});
+
+			});*@
+
+</script>

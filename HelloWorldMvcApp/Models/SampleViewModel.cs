@@ -18,5 +18,7 @@ namespace HelloWorldMvcApp.Models
         public string Answer { get; set; }
 
         public int Number { get; set; }
+
+            
     }
 }

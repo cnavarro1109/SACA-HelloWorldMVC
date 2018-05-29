@@ -1,4 +1,5 @@
-﻿@model HelloWorldMvcApp.Models.Student
+﻿@*@model HelloWorldMvcApp.Models.Student*@
+@model HelloWorldMvcApp.Models.StudentViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,18 +15,23 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="StudentId" class="control-label"></label>
-                <input asp-for="StudentId" class="form-control" />
-                <span asp-validation-for="StudentId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StudentName" class="control-label"></label>
-                <input asp-for="StudentName" class="form-control" />
-                <span asp-validation-for="StudentName" class="text-danger"></span>
+                <label asp-for="student.StudentName" class="control-label"></label>
+                <input asp-for="student.StudentName" class="form-control" />
+                <span asp-validation-for="student.StudentName" class="text-danger"></span>
+                @Html.ValidationMessageFor(model => model.student.StudentName, "", new { @class = "text-danger" })
+                
             </div>
 
             <div class="form-group">
-                @Html.DropDownListFor(m => m.StudentGender, new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender")
+                <label asp-for="student.Enrolled" class="control-label"></label>
+                <input type="checkbox" style="width:30px;height:30px;" asp-for="student.Enrolled" class="form-control" />
+                <span asp-validation-for="student.Enrolled" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                @*@Html.DropDownListFor(m => m.StudentGender, new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender")*@
+                @Html.DropDownListFor(x => Model.student.studentGenderId, new SelectList(Model.studentGender, "Id", "Name"), htmlAttributes: new { @class = "form-control", id = "StudentGender" })
+
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

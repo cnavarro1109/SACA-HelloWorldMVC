@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
+using Microsoft.EntityFrameworkCore;
+using HelloWorldMvcApp.Models;
+
 namespace HelloWorldMvcApp
 {
     public class Startup
@@ -22,6 +26,9 @@ namespace HelloWorldMvcApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            var connection = @"Server=.;Database=HelloWorldMVCApp;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<HelloWorldContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -11,9 +11,10 @@ using System;
 namespace HelloWorldMvcApp.Migrations
 {
     [DbContext(typeof(HelloWorldContext))]
-    partial class HelloWorldContextModelSnapshot : ModelSnapshot
+    [Migration("20180530000145_Update Field Name in Student Table")]
+    partial class UpdateFieldNameinStudentTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

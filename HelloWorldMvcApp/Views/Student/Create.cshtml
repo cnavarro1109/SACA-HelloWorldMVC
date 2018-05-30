@@ -1,5 +1,4 @@
-﻿@*@model HelloWorldMvcApp.Models.Student*@
-@model HelloWorldMvcApp.Models.StudentViewModel
+﻿@model HelloWorldMvcApp.Models.StudentViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -30,7 +29,7 @@
 
             <div class="form-group">
                 @*@Html.DropDownListFor(m => m.StudentGender, new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender")*@
-                @Html.DropDownListFor(x => Model.student.studentGenderId, new SelectList(Model.studentGender, "Id", "Name"), htmlAttributes: new { @class = "form-control", id = "StudentGender" })
+                @Html.DropDownListFor(x => Model.student.StudentGenderId, new SelectList(Model.studentGender, "Id", "Name"), htmlAttributes: new { @class = "form-control", id = "StudentGender" })
 
             </div>
             <div class="form-group">

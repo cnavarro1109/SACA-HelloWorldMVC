@@ -24,7 +24,6 @@ namespace HelloWorldMvcApp.Controllers
 
         public IActionResult Create()
         {
-
             #region Older Code
             //Initializing the new model
 
@@ -33,10 +32,15 @@ namespace HelloWorldMvcApp.Controllers
             //model.Genders = _context.StudentGenders;
             //return View(model);
             #endregion
+            StudentViewModel model = new StudentViewModel(); //Instance of the StudentViewModel
 
-            StudentViewModel model = new StudentViewModel();
-            model.studentGender = _context.StudentGenders.ToList();
-            return View(model);
+            //Populating the drop down field from our database 
+            //_context [Database]
+            //studentGendrs [Table]
+            //ToList() [Makes it into a drop down]
+            model.studentGender = _context.StudentGenders.ToList(); 
+
+            return View(model); //Passing the data to our view
         }
 
         [HttpPost]
@@ -54,7 +58,7 @@ namespace HelloWorldMvcApp.Controllers
             //Populating our model
             model.Enrolled = viewModel.student.Enrolled;
             model.StudentName = viewModel.student.StudentName;
-            model.studentGenderId = viewModel.student.studentGenderId;
+            model.StudentGenderId = viewModel.student.StudentGenderId;
 
 
             //Save the data 

@@ -35,12 +35,15 @@ namespace HelloWorldMvcApp.Models
         [Display(Name = "Enrolled")]
         public bool Enrolled { get; set; }
 
+        //Start: Foreign Key -----------------------
+
         [ForeignKey("StudentGender")]
-        public int studentGenderId { get; set; }
-        //public IEnumerable<StudentGender> Genders { get; set; }
+        public int StudentGenderId { get; set; }
 
         //Foreign Key Defined
         public virtual StudentGender StudentGender { get; set; }
+
+        //End: Foreign Key -----------------------
 
     }
 
